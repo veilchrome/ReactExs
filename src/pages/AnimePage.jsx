@@ -7,9 +7,7 @@ function AnimeDetails() {
   const fetchAnimeDetails = async () => {
     try {
       const response = await fetch(
-        `https://api.jikan.moe/v3/search/anime?q=${encodeURIComponent(
-          animeName
-        )}`
+        `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(animeName)}`
       );
       const data = await response.json();
       // Check if any results are returned
