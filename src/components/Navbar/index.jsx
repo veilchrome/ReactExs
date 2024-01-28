@@ -57,8 +57,8 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="active" to="/animedetails">
-                Anime Details
+              <NavLink activeClassName="active" to="/animehomepage">
+                A Homepage
               </NavLink>
             </li>
           </ul>
