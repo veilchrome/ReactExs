@@ -1,4 +1,6 @@
+// Halaman Home Utama //
 import { useEffect, useState } from "react";
+
 import "./indexStyles.css";
 
 const Clock = () => {
