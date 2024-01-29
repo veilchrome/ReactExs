@@ -1,7 +1,6 @@
 // Halaman Home Utama //
 import { useEffect, useState } from "react";
-
-import "./indexStyles.css";
+import styled from "styled-components";
 
 const Clock = () => {
   const [date, setDate] = useState(new Date());
@@ -18,27 +17,38 @@ const Clock = () => {
     setDate(new Date());
   };
 
-  return (
-    <div>
-      <p>Ini {date.toLocaleTimeString()}</p>
-    </div>
-  );
+  return <ClockText>Waktu Saat ini : {date.toLocaleTimeString()}</ClockText>;
 };
 
 const Home = () => {
   return (
-    <>
-      <div className="container-home">
-        <h1>Ini Halaman Home</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ullam
-          a pariatur, placeat nemo dolore natus quis, facilis vitae cumque
-          quaerat cum ut earum quae illo libero officia iure praesentium.
-        </p>
-        <Clock />
-      </div>
-    </>
+    <ContainerHome>
+      <h1>Ini Halaman Home</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ullam a
+        pariatur, placeat nemo dolore natus quis, facilis vitae cumque quaerat
+        cum ut earum quae illo libero officia iure praesentium.
+      </p>
+      <Clock />
+    </ContainerHome>
   );
 };
+
+const ContainerHome = styled.div`
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 500px;
+  padding: 50px;
+  background-color: #1a1a1a;
+  color: #ddd;
+  display: grid;
+`;
+
+const ClockText = styled.p`
+  font-size: 18px;
+  color: #fff;
+  margin-top: 20px;
+`;
 
 export default Home;
