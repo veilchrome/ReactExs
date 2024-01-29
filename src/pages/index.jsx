@@ -22,18 +22,26 @@ const Clock = () => {
 
 const Home = () => {
   return (
-    <ContainerHome>
-      <h1>Ini Halaman Home</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ullam a
-        pariatur, placeat nemo dolore natus quis, facilis vitae cumque quaerat
-        cum ut earum quae illo libero officia iure praesentium.
-      </p>
-      <Clock />
-    </ContainerHome>
+    <div>
+      <JumbotronImage img src="src\assets\img2.jpg" />
+      <ContainerHome>
+        <h1>Ini Halaman Home</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ullam
+          a pariatur, placeat nemo dolore natus quis, facilis vitae cumque
+          quaerat cum ut earum quae illo libero officia iure praesentium.
+        </p>
+        <Clock />
+      </ContainerHome>
+    </div>
   );
 };
 
+const JumbotronImage = styled.img`
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
 const ContainerHome = styled.div`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
